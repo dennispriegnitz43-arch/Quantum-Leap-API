@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Leap API - Simple AI Image API</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #1e1e1e;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+        h1, h2 {
+            color: #ffffff;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+        code {
+            background-color: #2d2d2d;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-family: "Courier New", Courier, monospace;
+            color: #c792ea;
+        }
+        pre {
+            background-color: #2d2d2d;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            color: #a6e22e;
+        }
+        .url {
+            color: #61dafb;
+            font-weight: bold;
+        }
+        .note {
+            background-color: #2c3e50;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Quantum Leap API</h1>
+            <p>Die einfachste und günstigste Pay-as-you-go API für KI-Bilder. Keine Abos, keine komplizierte Abrechnung.</p>
+        </header>
+
+        <main>
+            <h2>Erste Schritte (Getting Started)</h2>
+            <p>Dieses Projekt bietet dir programmatischen Zugang zu KI-Bildgenerierung zu extrem niedrigen Kosten. Perfekt für Prototypen, kleine Projekte und Bots.</p>
+            
+            <div class="note">
+                <strong>Wichtiger Hinweis:</strong> Der API-Server wird aktuell über ngrok betrieben. Die URL kann sich täglich ändern. Prüfe diese Seite für die aktuell gültige URL.
+                <br><strong>Aktuelle API-Basis-URL:</strong> <span class="url">https://pseudomiraculous-milena-radially.ngrok-free.dev</span>
+            </div>
+
+            <h2>API-Dokumentation</h2>
+
+            <h3>Schritt 1: Registrieren & API-Key erhalten</h3>
+            <p>Sende eine POST-Anfrage, um einen Account zu erstellen und deinen persönlichen API-Key zu erhalten.</p>
+            <pre><code>curl -X POST \
+  <span class="url">https://pseudomiraculous-milena-radially.ngrok-free.dev</span>/register \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "username": "mein_cooles_projektname"
+  }'</code></pre>
+
+            <h3>Schritt 2: Guthaben aufladen</h3>
+            <p>Sende einen beliebigen Betrag **USDC** auf dem **Polygon-Netzwerk** an die folgende Adresse, um dein Konto aufzuladen. Das Guthaben wird automatisch gutgeschrieben, sobald die Transaktion bestätigt ist (dauert ca. 1-2 Minuten).</p>
+            <pre><code>0x8369970761013afEB6cDB38D00020d93C23a0280</code></pre>
+
+            <h3>Schritt 3: Bild generieren</h3>
+            <p>Sende eine POST-Anfrage an den `/v1/images/generate` Endpunkt. Vergiss nicht, deinen API-Key im "Authorization"-Header zu senden!</p>
+            <pre><code>curl -X POST \
+  <span class="url">https://pseudomiraculous-milena-radially.ngrok-free.dev</span>/v1/images/generate \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: DEIN_PERSOENLICHER_API_KEY' \
+  -d '{
+    "prompt": "Ein süßer Panda isst Bambus"
+  }'</code></pre>
+            
+            <h2>Preise</h2>
+            <p>Einfach und transparent.</p>
+            <ul>
+                <li>**Preis pro Bild (512x512):** ca. <strong>$0.05 USDC</strong></li>
+            </ul>
+
+        </main>
+        
+        <footer>
+            <p><small>Quantum Leap API - Ein Projekt von Dennis Priegnitz (Stand: Oktober 2025)</small></p>
+        </footer>
+    </div>
+
+</body>
+</html>
