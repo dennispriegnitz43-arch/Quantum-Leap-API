@@ -17,6 +17,13 @@ KEYWORDS = [
     "pay-as-you-go image generation",
     "dall-e api too expensive",
     "affordable image generation api"
+    "image generation api pricing"
+
+"midjourney api alternative"
+
+"how to generate images programmatically"
+
+"serverless image generation"
 ]
 
 # GitHub API-Token wird sicher von der Action-Umgebung geladen.
