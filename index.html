@@ -52,6 +52,9 @@
             margin: 20px 0;
             border-radius: 4px;
         }
+        a {
+            color: #61dafb;
+        }
     </style>
 </head>
 <body>
@@ -74,7 +77,7 @@
             <h2>API-Dokumentation</h2>
 
             <h3>Schritt 1: Registrieren & API-Key erhalten</h3>
-            <p>Sende eine POST-Anfrage, um einen Account zu erstellen und deinen persönlichen API-Key zu erhalten.</p>
+            <p>Sende eine POST-Anfrage, um einen Account zu erstellen und deinen persönlichen API-Key zu erhalten. Diesen Key brauchst du für alle weiteren Schritte.</p>
             <pre><code>curl -X POST \
   <span class="url">https://pseudomiraculous-milena-radially.ngrok-free.dev</span>/register \
   -H 'Content-Type: application/json' \
@@ -83,11 +86,16 @@
   }'</code></pre>
 
             <h3>Schritt 2: Guthaben aufladen</h3>
-            <p>Sende einen beliebigen Betrag **USDC** auf dem **Polygon-Netzwerk** an die folgende Adresse, um dein Konto aufzuladen. Das Guthaben wird automatisch gutgeschrieben, sobald die Transaktion bestätigt ist (dauert ca. 1-2 Minuten).</p>
-            <pre><code>0x8369970761013afEB6cDB38D00020d93C23a0280</code></pre>
-
+            <p>Wir nutzen Gumroad für eine einfache und sichere Bezahlung. Guthaben wird in Blöcken von 5€ verkauft.</p>
+            <ol>
+                <li>Gehe zu unserer sicheren Gumroad-Produktseite: <a href="DEIN-GUMROAD-PRODUKT-LINK-HIER" target="_blank" class="url">Guthaben hier kaufen</a>.</li>
+                <li>Klicke auf "Ich will das!" und gehe zum Checkout.</li>
+                <li>**WICHTIG:** Gib im Feld "Dein API Key" deinen persönlichen API-Key aus Schritt 1 ein.</li>
+                <li>Schließe den Kauf ab. Dein Guthaben wird automatisch gutgeschrieben.</li>
+            </ol>
+            
             <h3>Schritt 3: Bild generieren</h3>
-            <p>Sende eine POST-Anfrage an den `/v1/images/generate` Endpunkt. Vergiss nicht, deinen API-Key im "Authorization"-Header zu senden!</p>
+            <p>Sende eine POST-Anfrage an den <code>/v1/images/generate</code> Endpunkt. Vergiss nicht, deinen API-Key im "Authorization"-Header zu senden!</p>
             <pre><code>curl -X POST \
   <span class="url">https://pseudomiraculous-milena-radially.ngrok-free.dev</span>/v1/images/generate \
   -H 'Content-Type: application/json' \
@@ -99,10 +107,10 @@
             <h2>Preise</h2>
             <p>Einfach und transparent.</p>
             <ul>
-                <li>**Preis pro Bild (512x512):** ca. <strong>$0.05 USDC</strong></li>
+                <li>**Guthaben-Aufladung:** 5,00 € pro Block</li>
+                <li>**Preis pro Bild (512x512):** ca. 0,05 € (Du kannst also ca. 100 Bilder pro Aufladung generieren)</li>
             </ul>
-
-        </main>
+            </main>
         
         <footer>
             <p><small>Quantum Leap API - Ein Projekt von Dennis Priegnitz (Stand: Oktober 2025)</small></p>
